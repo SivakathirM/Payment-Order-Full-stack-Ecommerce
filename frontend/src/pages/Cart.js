@@ -122,8 +122,8 @@ const Cart = () => {
       })
       const responseData=await response.json()
       if (responseData?.id) {
+        stripePromise.redirectToCheckout({sessionId:responseData.id})
         navigate("/success")
-        // stripePromise.redirectToCheckout({sessionId:responseData.id})
       }
   }
 
