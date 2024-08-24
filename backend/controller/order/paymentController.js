@@ -41,7 +41,7 @@ const paymentController=async(request,response)=>{
                     quantity:item.quantity
                 }
             }),
-            success_url:"https://mern-app-siva-ecommerce.onrender.com/success",
+            success_url:"https://mern-app-siva-ecommerce.onrender.com/cancel",
             cancel_url:`${process.env.FRONTEND_URL}/cencel`,
         }
 
