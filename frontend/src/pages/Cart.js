@@ -4,7 +4,6 @@ import Context from "../context";
 import displayINRCurrency from "../helpers/displayCurrency";
 import { MdDelete } from "react-icons/md";
 import {loadStripe} from '@stripe/stripe-js';
-import { toast } from "react-toastify";
 
 const Cart = () => {
   const [data,setData]=useState([])
@@ -122,7 +121,6 @@ const Cart = () => {
       const responseData=await response.json()
       if (responseData?.id) {
         stripePromise.redirectToCheckout({sessionId:responseData.id})
-        toast.success("order success");
       }
   }
 
