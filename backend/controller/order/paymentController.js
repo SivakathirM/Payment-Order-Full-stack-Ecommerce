@@ -42,7 +42,7 @@ const paymentController=async(request,response)=>{
                 }
             }),
             success_url:"https://mern-app-siva-ecommerce.onrender.com/cancel",
-            cancel_url:`${process.env.FRONTEND_URL}/cencel`,
+            cancel_url:`${process.env.FRONTEND_URL}/cancel`,
         }
 
         const session = await stripe.checkout.sessions.create(params)
