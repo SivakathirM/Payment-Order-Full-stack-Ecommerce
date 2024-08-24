@@ -4,12 +4,14 @@ import Context from "../context";
 import displayINRCurrency from "../helpers/displayCurrency";
 import { MdDelete } from "react-icons/md";
 import {loadStripe} from '@stripe/stripe-js';
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [data,setData]=useState([])
   const [loading,setLoading]=useState(false)
   const context= useContext(Context)
   const loadingCard=new Array(context.cardProductCount).fill(null) 
+  const navigate=useNavigate()
 
   const fetchData=async()=>{
     const response =await fetch(SummaryApi.addToCardProductView.url,{
@@ -120,6 +122,7 @@ const Cart = () => {
       })
       const responseData=await response.json()
       if (responseData?.id) {
+        navigate("/success")
         stripePromise.redirectToCheckout({sessionId:responseData.id})
       }
   }
