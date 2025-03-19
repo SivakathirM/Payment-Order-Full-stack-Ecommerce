@@ -5,11 +5,11 @@ import image3 from '../assest/banner/web3.webp'
 import image1 from '../assest/banner/web4.webp'
 import image5 from '../assest/banner/web5.webp'
 
-import image1Mobile from '../assest/banner/mobile1.jpeg'
-import image2Mobile from '../assest/banner/mobile2.jpeg'
-import image3Mobile from '../assest/banner/mobile3.jpg'
-import image4Mobile from '../assest/banner/mobile4.jpeg'
-import image5Mobile from '../assest/banner/mobile5.jpeg'
+import image1Mobile from '../assest/banner/mobile1.webp'
+import image2Mobile from '../assest/banner/mobile2.webp'
+import image3Mobile from '../assest/banner/mobile3.webp'
+import image4Mobile from '../assest/banner/mobile4.webp'
+import image5Mobile from '../assest/banner/mobile5.webp'
 
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
